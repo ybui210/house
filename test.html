@@ -21,6 +21,16 @@
 		ctx.fillStyle="#76FF03";
 		ctx.fillRect(0,250,500,250);
 		
+		//DRAW SHADOW
+		ctx.beginPath();
+		ctx.moveTo(210,440);
+		ctx.lineTo(400,440);
+		ctx.lineTo(540,340);
+		ctx.lineTo(300,340);
+		ctx.closePath();
+		ctx.fillStyle = "#64DD17";
+		ctx.fill();		
+
 		//DRAW BASE
 		ctx.beginPath();
 		ctx.moveTo(110,320);
@@ -42,6 +52,7 @@
 		ctx.closePath();
 		ctx.fillStyle="#B71C1C";
 		ctx.fill();
+		
 		
 		
 		//DRAW ROOF		
