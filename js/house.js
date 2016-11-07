@@ -16,10 +16,9 @@ function drawHouse() {
 }
 //GRASS
 function drawBackground () {
-/*var shapes = document.getElementById("myShapes");
-var ctx = shapes.getContext("2d");*/
-//ctx.fillStyle="#76FF03";
-//ctx.fillRect(0,250,500,250);
+
+ctx.fillStyle="#76FF03";
+ctx.fillRect(0,250,500,250);
 	ctx.fillStyle="#40C4FF";
 	ctx.fillRect(0,0,500,500);
 	ctx.fillStyle="#76FF03";
@@ -38,8 +37,7 @@ function drawShadow() {
 
 //DRAW BASE
 function drawBase() {
-/*var shapes = document.getElementById("myShapes");
-var ctx = shapes.getContext("2d");*/
+
 	ctx.beginPath();
 	ctx.moveTo(110,320);
 	ctx.lineTo(155,260);
@@ -87,8 +85,7 @@ function drawRoof () {
 
 //DRAW CHIMNEY
 function drawChimney() {
-/*var shapes = document.getElementById("myShapes");
-var ctx = shapes.getContext("2d");*/
+
 	ctx.beginPath();
 	ctx.moveTo(270,260);
 	ctx.lineTo(300,250);
@@ -121,8 +118,7 @@ var ctx = shapes.getContext("2d");*/
 }
 
 //Draw Door
-/*var shapes = document.getElementById("myShapes");
-var ctx = shapes.getContext("2d");*/
+
 function drawDoor() {
 	ctx.beginPath();
 	ctx.moveTo(180,435);
