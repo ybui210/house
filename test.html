@@ -4,23 +4,24 @@
 	<meta charset="utf-8">
     <title>House</title>
 	<link href="style/style.css" rel="stylesheet">
-	
+
 </head>
 
 <body>
 
 <canvas id="myShapes" width="500px" height="500px"></canvas>
-<script>
+<script type="text/javascript" src="js/house.js" ></script>
+<!--<script>
 		//DRAW HOUSE
 		var shapes = document.getElementById("myShapes");
 		var ctx = shapes.getContext("2d");
-		
+
 		//background
 		ctx.fillStyle="#40C4FF";
 		ctx.fillRect(0,0,500,500);
 		ctx.fillStyle="#76FF03";
 		ctx.fillRect(0,250,500,250);
-		
+
 		//DRAW SHADOW
 		ctx.beginPath();
 		ctx.moveTo(210,440);
@@ -29,7 +30,11 @@
 		ctx.lineTo(300,340);
 		ctx.closePath();
 		ctx.fillStyle = "#64DD17";
+<<<<<<< HEAD
 		ctx.fill();	
+=======
+		ctx.fill();
+>>>>>>> origin/master
 
 		//DRAW BASE
 		ctx.beginPath();
@@ -42,7 +47,7 @@
 		ctx.closePath();
 		ctx.fillStyle="#C62828";
 		ctx.fill();
-		
+
 		ctx.beginPath();
 		ctx.moveTo(210,340);
 		ctx.lineTo(330,300);
@@ -52,10 +57,10 @@
 		ctx.closePath();
 		ctx.fillStyle="#B71C1C";
 		ctx.fill();
-		
-		
-		
-		//DRAW ROOF		
+
+
+
+		//DRAW ROOF
 		ctx.beginPath();
 		ctx.moveTo(150,250);
 		ctx.lineTo(90,325);
@@ -65,7 +70,7 @@
 		ctx.closePath();
 		ctx.fillStyle = "#3E2723";
 		ctx.fill();
-		
+
 		ctx.beginPath();
 		ctx.moveTo(150,250);
 		ctx.lineTo(300,200);
@@ -75,7 +80,7 @@
 		ctx.closePath();
 		ctx.fillStyle = "#212121"
 		ctx.fill();
-		
+
 		//DRAW CHIMNEY
 		ctx.beginPath();
 		ctx.moveTo(270,260);
@@ -86,7 +91,7 @@
 		ctx.closePath();
 		ctx.fillStyle = "#BF360C";
 		ctx.fill();
-		
+
 		ctx.beginPath();
 		ctx.moveTo(270,200);
 		ctx.lineTo(270,260);
@@ -96,17 +101,17 @@
 		ctx.closePath();
 		ctx.fillStyle = "#F4511E";
 		ctx.fill();
-		
+
 		ctx.beginPath();
 		ctx.moveTo(250,185);
 		ctx.lineTo(270,200);
 		ctx.lineTo(300,190);
 		ctx.lineTo(280,175);
-		ctx.lineTo(250,185);	
+		ctx.lineTo(250,185);
 		ctx.closePath();
 		ctx.fillStyle = "#990000";
 		ctx.fill();
-		
+
 		//Draw Door
 		ctx.beginPath();
 		ctx.moveTo(180,435);
@@ -115,6 +120,7 @@
 		ctx.lineTo(180,370);
 		ctx.lineTo(180,435);
 		ctx.closePath();
+<<<<<<< HEAD
 		ctx.fillStyle = "#FFC400";
 		ctx.fill();
 		
@@ -123,3 +129,10 @@
   		<input type="range" name="points" min="0" max="100">
 	</form>
 </body>
+=======
+		ctx.fillStyle = "#ffcc00";
+		ctx.fill();-->
+
+	</script>
+</body>
+>>>>>>> origin/master
