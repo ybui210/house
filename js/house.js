@@ -13,8 +13,7 @@ function drawHouse() {
 	drawRoof();
 	
 	drawDoor();
-
-
+	
 }
 //GRASS
 function drawBackground () {
@@ -89,6 +88,7 @@ function drawRoof () {
 	ctx.closePath();
 	ctx.fillStyle = "#212121"
 	ctx.fill();
+
 ////////////////////////////////////
 
 	ctx.beginPath();
@@ -158,3 +158,4 @@ function drawDoor() {
 	ctx.fillStyle = "#ffcc00";
 	ctx.fill();
 }
+
