@@ -21,7 +21,7 @@ function drawBackground () {
 	ctx.fillStyle="#40C4FF";
 	ctx.fillRect(0,0,500,500);
 	ctx.fillStyle="#76FF03";
-	ctx.fillRect(0,250,500,250);
+	ctx.fillRect(0,280,500,250);
 }
 
 //DRAW BASE
@@ -46,6 +46,26 @@ function drawBase() {
 	ctx.closePath();
 	ctx.fillStyle="#B71C1C";
 	ctx.fill();
+
+	ctx.beginPath();
+	ctx.moveTo(335,260);
+	ctx.lineTo(375,310);
+	ctx.lineTo(375,410);
+	ctx.lineTo(300,445);
+	ctx.lineTo(300,332);
+	ctx.lineTo(335,260);
+	ctx.closePath();
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.moveTo(300,445);
+	ctx.lineTo(300,332);
+	ctx.lineTo(205,300);
+	ctx.lineTo(205,425);
+	ctx.lineTo(300,445);
+	ctx.closePath();
+	ctx.fillStyle="#C62828";
+	ctx.fill();
 }
 
 //DRAW ROOF
@@ -69,8 +89,27 @@ function drawRoof () {
 	ctx.closePath();
 	ctx.fillStyle = "#212121"
 	ctx.fill();
+////////////////////////////////////
 
-	
+	ctx.beginPath();
+	ctx.moveTo(205,332);
+	ctx.lineTo(220,250);
+	ctx.lineTo(340,250);
+	ctx.lineTo(295,347);
+	ctx.lineTo(205,337);
+	ctx.closePath();
+	ctx.fillStyle="black";
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.moveTo(340,250);
+	ctx.lineTo(335,260);
+	ctx.lineTo(380,320);
+	ctx.lineTo(385,310);
+	ctx.moveTo(340,250);
+	ctx.closePath();
+	ctx.fillStyle="black";
+	ctx.fill();
 }
 
 //DRAW CHIMNEY
