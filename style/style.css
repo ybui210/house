@@ -1,8 +1,23 @@
 body {
-    	padding: 2em;
+    padding: 2em;
 	
     }
 canvas {
 	border: 2px solid black;
+}
+table {
+	position: relative;
+	top: 100px;
+	right: 50px;
+	font-size: 12pt;
+	float: right;	
+}
 
+.width {
+	width: 100px;
+}
+
+td {
+	height:30px;
+	vertical-align: top;
 }

@@ -1,18 +1,17 @@
 var shapes = document.getElementById("myShapes");
 var ctx = shapes.getContext("2d");
 
-var x = drawHouse();
+drawHouse();
 
 //DRAW HOUSE
 function drawHouse() {
 
-	drawBackground();
-	
+	drawBackground();	
 	drawBase();
 	drawChimney();
 	drawRoof();
-	
 	drawDoor();
+	drawWindows();
 	
 }
 //GRASS
@@ -45,7 +44,7 @@ function drawBase() {
 	ctx.closePath();
 	ctx.fillStyle="#B71C1C";
 	ctx.fill();
-
+//SIDE right
 	ctx.beginPath();
 	ctx.moveTo(335,260);
 	ctx.lineTo(375,310);
@@ -55,7 +54,7 @@ function drawBase() {
 	ctx.lineTo(335,260);
 	ctx.closePath();
 	ctx.fill();
-
+//left
 	ctx.beginPath();
 	ctx.moveTo(300,445);
 	ctx.lineTo(300,332);
@@ -86,7 +85,7 @@ function drawRoof () {
 	ctx.lineTo(150,350);
 	ctx.lineTo(100,250);
 	ctx.closePath();
-	ctx.fillStyle = "#212121"
+	ctx.fillStyle = "#212121";
 	ctx.fill();
 
 ////////////////////////////////////
@@ -159,3 +158,17 @@ function drawDoor() {
 	ctx.fill();
 }
 
+//Draw windows
+
+function drawWindows() {
+	ctx.beginPath();
+	ctx.moveTo(240,360);
+	ctx.lineTo(270,365);
+	ctx.lineTo(270,405);
+	ctx.lineTo(240,400);
+	ctx.lineTo(240,360);
+	
+	ctx.closePath();
+	ctx.fillStyle = "#ffcc00";
+	ctx.fill();
+}
