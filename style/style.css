@@ -1,8 +1,11 @@
 body {
-    	padding: 2em;
+    padding: 2em;
 	
     }
 canvas {
 	border: 2px solid black;
 
+}
+p {
+    margin-left: 150px;
 }
