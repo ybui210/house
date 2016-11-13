@@ -1,103 +1,57 @@
 var shapes = document.getElementById("myShapes");
 var ctx = shapes.getContext("2d");
 
-var x = house() + drawSmoke();
+var a = house() + drawSmoke();
 
+var a;
+var speed;
+function adjustSpeed() {
+	clearInterval(a);
+	speed= parseInt(document.getElementById('slider').value);
+	a = setInterval(function() {animate()}, (speed * 10));
 
+	document.getElementById('display').innerHTML = speed;
 
-/*var animate = setInterval(function() {moveUp()}, 1000);
-var animate1 = setInterval(function() {drawHouse()}, 2000);
-var animate2 = setInterval(function() {drawHouse2()}, 3000);
-var animate3 = setInterval(function() {drawHouse3()}, 4000);
-var animate4 = setInterval(function() {drawHouse4()}, 5000);
-var animate5 = setInterval(function() {drawHouse5()}, 6000);*/
+}
 
-var counter = 0;
-
-
-
-/*function moveUp() {
-  //var elem = document.getElementById("animate");
-	drawHouse();
-	drawHouse1_1();
-	drawHouse2();
-	drawHouse2_1();
-	drawHouse3();
-
-  var pos = 350;
-  var id = setInterval(frame(), 1);
-  function frame() {
-    if (pos === 0) {
-      clearInterval(id);
-    } else {
-      pos--;
-      shapes.style.top = pos + 'px';
-      shapes.style.bottom = pos + 'px';
-    }
-  }
-}*/
-var interval = setInterval(function() {animate()}, 100);
+var interval = setInterval(function() {animate()}, 1000);
 var x = 0;
 var y = 15;
 function animate() {
+
 	ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 	house();
-	//drawSmoke1_1();
-	//drawHouse3();
 	drawSmoke();
-	//drawSmoke1_1();
 
 	y-=5;
 	if (y < 0) {
 		y = 140;
 	}
+}
 
-};
-/*function moveUp() {
-	var i = setInterval(function(){
-  drawHouse();
-	drawHouse1_1();
-	drawHouse2();
-	drawHouse2_1();
-  var pos = 350;
-  var id = setInterval(frame, 1);
-  function frame() {
-    if (pos === 0) {
-      clearInterval(id);
-    } else {
-      pos--;
-      shapes.style.top = pos + 'px';
-      shapes.style.bottom = pos + 'px';
-    }
-
-  }
-	/*counter++;
-	if(counter == 1) {
-			clearInterval(i);
-			setInterval(function() {drawHouse2()}, 4000);
-	}
-}, 500);
-}*/
 
 function house() {
 
+	drawBackground();
 	drawBackground();
 	drawBase();
 	drawChimney();
 	drawRoof();
 	drawDoor();
-	//drawSmoke1();
+	drawWindows();
 
 }
 
 //GRASS
 function drawBackground () {
+
 	//ctx.fillStyle="#40C4FF";
 	ctx.fillStyle = "#87CEFA";
 	ctx.fillRect(0,0,500,500);
 	//ctx.fillStyle="#76FF03";
 	ctx.fillStyle = "#BDB76B";
 	ctx.fillRect(0,320,500,180);
+
 }
 
 //DRAW BASE
@@ -110,7 +64,9 @@ function drawBase() {
 	ctx.lineTo(60,420);
 	ctx.lineTo(60,320);
 	ctx.closePath();
-	ctx.fillStyle="#C62828";
+	//ctx.fillStyle="#C62828";
+	//ctx.fillStyle="#c2c2a3";
+	ctx.fillStyle="#FFF2dF";
 	ctx.fill();
 
 	ctx.beginPath();
@@ -120,8 +76,12 @@ function drawBase() {
 	ctx.lineTo(160,440);
 	ctx.lineTo(160,340);
 	ctx.closePath();
-	ctx.fillStyle="#B71C1C";
+	//ctx.fillStyle="#B71C1C";
+	//ctx.fillStyle="#999966";
+	ctx.fillStyle="#f1e3dd";
 	ctx.fill();
+
+//SIDE right
 
 	ctx.beginPath();
 	ctx.moveTo(335,260);
@@ -133,6 +93,10 @@ function drawBase() {
 	ctx.closePath();
 	ctx.fill();
 
+
+
+//left
+
 	ctx.beginPath();
 	ctx.moveTo(300,445);
 	ctx.lineTo(300,332);
@@ -140,7 +104,9 @@ function drawBase() {
 	ctx.lineTo(205,425);
 	ctx.lineTo(300,445);
 	ctx.closePath();
-	ctx.fillStyle="#C62828";
+	//ctx.fillStyle="#C62828";
+	//ctx.fillStyle="#c2c2a3";
+	ctx.fillStyle="#FFF2dF";
 	ctx.fill();
 }
 
@@ -153,7 +119,8 @@ function drawRoof () {
 	ctx.lineTo(105,260);
 	ctx.lineTo(100,250);
 	ctx.closePath();
-	ctx.fillStyle = "#3E2723";
+	//ctx.fillStyle = "#3E2723";
+	ctx.fillStyle = "#625750";
 	ctx.fill();
 
 	ctx.beginPath();
@@ -163,7 +130,8 @@ function drawRoof () {
 	ctx.lineTo(150,350);
 	ctx.lineTo(100,250);
 	ctx.closePath();
-	ctx.fillStyle = "#212121"
+	//ctx.fillStyle = "#212121";
+	ctx.fillStyle = "#96897f";
 	ctx.fill();
 
 ////////////////////////////////////
@@ -175,7 +143,7 @@ function drawRoof () {
 	ctx.lineTo(295,347);
 	ctx.lineTo(205,337);
 	ctx.closePath();
-	ctx.fillStyle="#212121";
+	//ctx.fillStyle="#625750";
 	ctx.fill();
 
 	ctx.beginPath();
@@ -185,7 +153,30 @@ function drawRoof () {
 	ctx.lineTo(385,310);
 	ctx.moveTo(340,250);
 	ctx.closePath();
-	ctx.fillStyle="#212121";
+	//ctx.fillStyle="#cc3300";
+	ctx.fill();
+
+////////////////////////////////////
+
+	ctx.beginPath();
+	ctx.moveTo(205,332);
+	ctx.lineTo(220,250);
+	ctx.lineTo(340,250);
+	ctx.lineTo(295,347);
+	ctx.lineTo(205,337);
+	ctx.closePath();
+	//ctx.fillStyle="#212121";
+	ctx.fillStyle = "#96897f";
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.moveTo(340,250);
+	ctx.lineTo(335,260);
+	ctx.lineTo(380,320);
+	ctx.lineTo(385,310);
+	ctx.moveTo(340,250);
+	ctx.closePath();
+	ctx.fillStyle="#96897f";
 	ctx.fill();
 }
 
@@ -198,7 +189,8 @@ function drawChimney() {
 	ctx.lineTo(170,200);
 	ctx.lineTo(170,260);
 	ctx.closePath();
-	ctx.fillStyle = "#BF360C";
+	//ctx.fillStyle = "#BF360C";
+	ctx.fillStyle = "#7a7a52";
 	ctx.fill();
 
 	ctx.beginPath();
@@ -208,7 +200,8 @@ function drawChimney() {
 	ctx.lineTo(150,185);
 	ctx.lineTo(170,200);
 	ctx.closePath();
-	ctx.fillStyle = "#F4511E";
+	//ctx.fillStyle = "#F4511E";
+	ctx.fillStyle = "#999966";
 	ctx.fill();
 
 	ctx.beginPath();
@@ -218,7 +211,8 @@ function drawChimney() {
 	ctx.lineTo(180,175);
 	ctx.lineTo(150,185);
 	ctx.closePath();
-	ctx.fillStyle = "#990000";
+	//ctx.fillStyle = "#990000";
+	ctx.fillStyle = "#5C5C3D";
 	ctx.fill();
 }
 
@@ -231,6 +225,23 @@ function drawDoor() {
 	ctx.lineTo(80,360);
 	ctx.lineTo(130,370);
 	ctx.lineTo(130,435);
+
+	ctx.closePath();
+	ctx.fillStyle = "#ffcc00";
+	ctx.fill();
+}
+
+//Draw windows
+
+function drawWindows() {
+	ctx.beginPath();
+	ctx.moveTo(240,360);
+	ctx.lineTo(270,365);
+	ctx.lineTo(270,405);
+	ctx.lineTo(240,400);
+	ctx.lineTo(240,360);
+
+
 	ctx.closePath();
 	ctx.fillStyle = "#ffcc00";
 	ctx.fill();
@@ -244,22 +255,7 @@ var y = 140;
 var r = 8;
 function drawSmoke() {
 
-	/*ctx.beginPath(); //bottom
-	ctx.arc(185, y, r, 0, 2 * Math.PI);
-	ctx.fillStyle="#989898";
-	ctx.fill();
 
-	ctx.beginPath(); //left
-	ctx.arc(180, y - 5, r, 0, 2 * Math.PI);
-	ctx.fillStyle="#989898";
-	ctx.fill();
-
-	ctx.beginPath(); //right
-	ctx.arc(190, y - 5, r, 0, 2 * Math.PI);
-	ctx.fillStyle="#989898";
-	ctx.fill();*/
-
-	/////////////////////////////////////////
 	ctx.beginPath(); // right
 	ctx.arc(190, y - 5, r, 0, 2 * Math.PI);
 	ctx.fillStyle="#989898";
@@ -286,15 +282,15 @@ function drawSmoke() {
 	ctx.fill();
 
 
-	y-=10;
+	y-=5;
 	r+=2;
 	if (y < 0) {
-		y = 140;
+		y = 145;
 		r = 8;
 	}
 
 }
-function drawSmoke1_1() {
+/*function drawSmoke1_1() {
 
 	ctx.beginPath(); //bottom
 	ctx.arc(185, y - y1, 8 + rad1, 0, 2 * Math.PI);
@@ -504,7 +500,7 @@ function drawSmoke3_2() {
 	ctx.fillStyle="#989898";
 	ctx.fill();
 
-}
+}*/
 /*function drawSmoke() {
 	ctx.beginPath();
   ctx.moveTo(170, 80);
