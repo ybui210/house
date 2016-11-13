@@ -10,6 +10,7 @@ function adjustSpeed() {
 	speed= parseInt(document.getElementById('slider').value);
 	a = setInterval(function() {animate()}, (speed * 10));
 
+<<<<<<< HEAD
 	document.getElementById('display').innerHTML = speed;
 
 }
@@ -34,16 +35,28 @@ function house() {
 
 	drawBackground();
 	drawBackground();
+=======
+	drawBackground();	
+	drawMountain();
+	drawHills();
+>>>>>>> 32724a7877a719af323e6e679346f72183bdd436
 	drawBase();
 	drawChimney();
 	drawRoof();
 	drawDoor();
 	drawWindows();
+<<<<<<< HEAD
 
+=======
+	drawSun();
+	drawSteps();
+	
+>>>>>>> 32724a7877a719af323e6e679346f72183bdd436
 }
 
 //GRASS
 function drawBackground () {
+<<<<<<< HEAD
 
 	//ctx.fillStyle="#40C4FF";
 	ctx.fillStyle = "#87CEFA";
@@ -51,9 +64,27 @@ function drawBackground () {
 	//ctx.fillStyle="#76FF03";
 	ctx.fillStyle = "#BDB76B";
 	ctx.fillRect(0,320,500,180);
+=======
+	ctx.fillStyle="#40C4FF";
+	ctx.fillRect(0,0,500,280);
+	ctx.fillStyle="#166602";
+	ctx.fillRect(0,280,500,200);
+>>>>>>> 32724a7877a719af323e6e679346f72183bdd436
 
 }
 
+function drawHills() {
+	/*ctx.beginPath();
+	ctx.fillStyle="#D1BE1F";
+	ctx.arc(110,750,500,0,Math.PI*2,true);
+	ctx.fill();
+	ctx.closePath();*/
+	ctx.beginPath();
+	ctx.fillStyle="#31B90F";
+	ctx.arc(230,820,500,0,Math.PI*2,true);
+	ctx.fill();
+	ctx.closePath();
+}
 //DRAW BASE
 function drawBase() {
 	ctx.beginPath();
@@ -235,6 +266,7 @@ function drawDoor() {
 
 function drawWindows() {
 	ctx.beginPath();
+<<<<<<< HEAD
 	ctx.moveTo(240,360);
 	ctx.lineTo(270,365);
 	ctx.lineTo(270,405);
@@ -242,8 +274,98 @@ function drawWindows() {
 	ctx.lineTo(240,360);
 
 
+=======
+	ctx.moveTo(230,360);
+	ctx.lineTo(280,366);
+	ctx.lineTo(280,410);
+	ctx.lineTo(230,400);
+	ctx.lineTo(230,359);	
+>>>>>>> 32724a7877a719af323e6e679346f72183bdd436
 	ctx.closePath();
+	ctx.strokeStyle = "#4B3501";
+	ctx.lineWidth = 5;
+	ctx.stroke();
 	ctx.fillStyle = "#ffcc00";
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.moveTo(255,363);
+	ctx.lineTo(255,405);
+	ctx.closePath();
+	ctx.strokeStyle = "#4B3501";
+	ctx.lineWidth = 3;
+	ctx.stroke();	
+}
+
+function drawSun() {
+	ctx.beginPath();
+	ctx.arc(0,0,100,0, Math.PI*2,true);
+	ctx.closePath();
+	ctx.fillStyle="yellow";
+	ctx.fill();
+}
+
+function drawMountain() {
+	ctx.beginPath();
+	ctx.moveTo(0,280);
+	ctx.lineTo(300,150);
+	ctx.lineTo(400,150);
+	ctx.lineTo(700,280);
+	ctx.closePath();
+	ctx.fillStyle="#3E475B";
+	ctx.fill();
+	
+	//SNOW
+	ctx.beginPath();
+	ctx.moveTo(400,150);
+	ctx.lineTo(300,150);
+	ctx.lineTo(200,194);
+	ctx.lineTo(310,160);
+	
+	ctx.lineTo(300,210);
+	ctx.lineTo(330,165);
+
+	ctx.lineTo(345,220);
+	ctx.lineTo(355,170);
+
+	ctx.lineTo(385,240);
+	ctx.lineTo(390,167);
+
+	ctx.lineTo(440,210);
+	ctx.lineTo(420,170);
+
+	ctx.lineTo(480,183);
+	ctx.closePath();
+	ctx.fillStyle="white";
+	ctx.fill();
+}
+
+function drawSteps() {
+	ctx.beginPath();
+	ctx.moveTo(70,440);
+	ctx.lineTo(120,450);
+	ctx.lineTo(105,460);
+	ctx.lineTo(55,450);
+	ctx.closePath();	
+	ctx.fillStyle="#414242";
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.moveTo(40,460);
+	ctx.lineTo(90,470);
+	ctx.lineTo(75,480);
+	ctx.lineTo(25,470);
+	ctx.lineTo(40,460);
+	ctx.closePath();
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.moveTo(10,480);
+	ctx.lineTo(60,490);
+	ctx.lineTo(45,500);
+	ctx.lineTo(-5,490);
+	ctx.lineTo(10,480);
+	ctx.closePath();
 	ctx.fill();
 }
 
