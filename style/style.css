@@ -1,16 +1,15 @@
 body {
-    padding: 2em;
+	margin: 50px;
 	
     }
 canvas {
 	border: 2px solid black;
 }
 table {
-	position: relative;
-	top: 100px;
-	right: 50px;
-	font-size: 12pt;
-	float: right;	
+	border: 1px solid;
+	font-size: 13pt;
+	float: left;	
+	margin: 20px;
 }
 
 p {
